@@ -35,14 +35,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piI-v5-itf">
                                 <rect key="frame" x="130" y="400" width="154" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sing Up"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-Kv-Md1">
-                                <rect key="frame" x="91" y="551" width="232" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Google ">
-                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="PDc-nF-cGv" eventType="touchUpInside" id="wHE-kP-EnM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TT-pA-3ws">
                                 <rect key="frame" x="140.5" y="455" width="133" height="24"/>
@@ -61,14 +57,11 @@
                             <constraint firstItem="jcn-tg-Qrv" firstAttribute="leading" secondItem="iKq-hD-QId" secondAttribute="leading" constant="89" id="OrQ-zM-ZUj"/>
                             <constraint firstItem="7Gr-rF-Ttf" firstAttribute="top" secondItem="jcn-tg-Qrv" secondAttribute="bottom" constant="38" id="Xjs-y3-0X1"/>
                             <constraint firstItem="8TT-pA-3ws" firstAttribute="top" secondItem="piI-v5-itf" secondAttribute="bottom" constant="24" id="aP9-wG-t2f"/>
-                            <constraint firstItem="BH8-Kv-Md1" firstAttribute="leading" secondItem="iKq-hD-QId" secondAttribute="leading" constant="91" id="eRP-BR-IHP"/>
                             <constraint firstItem="iKq-hD-QId" firstAttribute="trailing" secondItem="7Gr-rF-Ttf" secondAttribute="trailing" constant="89" id="ebd-WK-gqb"/>
                             <constraint firstItem="MyI-GB-fG3" firstAttribute="top" secondItem="iKq-hD-QId" secondAttribute="top" constant="95" id="g9L-d9-HAd"/>
                             <constraint firstItem="MyI-GB-fG3" firstAttribute="centerX" secondItem="SpF-cs-oue" secondAttribute="centerX" id="gi4-Ij-H9n"/>
                             <constraint firstItem="piI-v5-itf" firstAttribute="leading" secondItem="iKq-hD-QId" secondAttribute="leading" constant="130" id="hAh-qr-mhn"/>
                             <constraint firstItem="iKq-hD-QId" firstAttribute="trailing" secondItem="jcn-tg-Qrv" secondAttribute="trailing" constant="89" id="nlB-iq-stI"/>
-                            <constraint firstItem="BH8-Kv-Md1" firstAttribute="top" secondItem="piI-v5-itf" secondAttribute="bottom" constant="120" id="noC-27-Nzf"/>
-                            <constraint firstItem="iKq-hD-QId" firstAttribute="trailing" secondItem="BH8-Kv-Md1" secondAttribute="trailing" constant="91" id="rCu-l0-umE"/>
                             <constraint firstItem="iKq-hD-QId" firstAttribute="trailing" secondItem="piI-v5-itf" secondAttribute="trailing" constant="130" id="wpX-Zy-J8O"/>
                         </constraints>
                     </view>
@@ -77,6 +70,7 @@
                         <outlet property="emailTextField" destination="jcn-tg-Qrv" id="zte-g6-rxg"/>
                         <outlet property="passwordTextField" destination="7Gr-rF-Ttf" id="Rev-MB-hcB"/>
                         <segue destination="fWI-9J-JkH" kind="presentation" identifier="toCreateAccountPage" id="Dlc-XE-Ccs"/>
+                        <segue destination="FAK-9u-1MG" kind="presentation" identifier="toHomePage" modalPresentationStyle="fullScreen" id="Op7-xl-XcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUB-4U-eRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,7 +99,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Adres" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUw-JS-uOB">
                                 <rect key="frame" x="89" y="346" width="236" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="yes" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-Qf-nF5">
                                 <rect key="frame" x="89" y="418" width="236" height="34"/>
@@ -116,6 +110,9 @@
                                 <rect key="frame" x="130" y="494" width="154" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sing Up"/>
+                                <connections>
+                                    <action selector="createAccount:" destination="fWI-9J-JkH" eventType="touchUpInside" id="ORp-TL-caA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gjc-UX-ySZ"/>
@@ -142,22 +139,38 @@
                         <outlet property="emailTextField" destination="ZUw-JS-uOB" id="nl7-fq-7E0"/>
                         <outlet property="nameTextField" destination="sOW-hR-86s" id="SGj-r7-Ea6"/>
                         <outlet property="passwordTextField" destination="ydH-Qf-nF5" id="MOB-VX-Ibw"/>
+                        <segue destination="FAK-9u-1MG" kind="presentation" identifier="toHomePage" modalPresentationStyle="fullScreen" id="zhq-Sy-GUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFT-DL-V0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="66"/>
+            <point key="canvasLocation" x="-623" y="66"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Z7d-yA-BEr">
+            <objects>
+                <viewController id="FAK-9u-1MG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3g-hu-CP9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9F8-Ay-gvO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ln6-6l-Mwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="809"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Op7-xl-XcB"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

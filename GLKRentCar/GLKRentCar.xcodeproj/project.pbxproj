@@ -14,9 +14,12 @@
 		7D4D7664283A3BBB003E5468 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D7662283A3BBB003E5468 /* LaunchScreen.storyboard */; };
 		7D4D766D283A3CF6003E5468 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D766C283A3CF6003E5468 /* CreateAccount.swift */; };
 		7D4D766F283A4303003E5468 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D766E283A4303003E5468 /* LogInPage.swift */; };
+		7D4D7671283A577A003E5468 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D7670283A577A003E5468 /* GoogleService-Info.plist */; };
+		F0D57C47C9420B8A7E160399 /* Pods_GLKRentCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE84547F843413D7EF5C6D2C /* Pods_GLKRentCar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLKRentCar.debug.xcconfig"; path = "Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar.debug.xcconfig"; sourceTree = "<group>"; };
 		7D4D7654283A3BB8003E5468 /* GLKRentCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKRentCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4D7657283A3BB8003E5468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		7D4D7665283A3BBB003E5468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D4D766C283A3CF6003E5468 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		7D4D766E283A4303003E5468 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
+		7D4D7670283A577A003E5468 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC38DD1243438655BBF9EC52 /* Pods-GLKRentCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLKRentCar.release.xcconfig"; path = "Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar.release.xcconfig"; sourceTree = "<group>"; };
+		EE84547F843413D7EF5C6D2C /* Pods_GLKRentCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLKRentCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D57C47C9420B8A7E160399 /* Pods_GLKRentCar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BA49221C6CC87A69715BC55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE84547F843413D7EF5C6D2C /* Pods_GLKRentCar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D4D764B283A3BB8003E5468 = {
 			isa = PBXGroup;
 			children = (
 				7D4D7656283A3BB8003E5468 /* GLKRentCar */,
 				7D4D7655283A3BB8003E5468 /* Products */,
+				AE7BDA8DF9426E73C5B459D3 /* Pods */,
+				7BA49221C6CC87A69715BC55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,7 @@
 				7D4D7657283A3BB8003E5468 /* AppDelegate.swift */,
 				7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */,
 				7D4D765D283A3BB8003E5468 /* Main.storyboard */,
+				7D4D7670283A577A003E5468 /* GoogleService-Info.plist */,
 				7D4D7660283A3BBB003E5468 /* Assets.xcassets */,
 				7D4D7662283A3BBB003E5468 /* LaunchScreen.storyboard */,
 				7D4D7665283A3BBB003E5468 /* Info.plist */,
@@ -78,6 +96,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		AE7BDA8DF9426E73C5B459D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */,
+				EC38DD1243438655BBF9EC52 /* Pods-GLKRentCar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D4D7668283A3BBB003E5468 /* Build configuration list for PBXNativeTarget "GLKRentCar" */;
 			buildPhases = (
+				BE21B7853FA419DD0766A2AF /* [CP] Check Pods Manifest.lock */,
 				7D4D7650283A3BB8003E5468 /* Sources */,
 				7D4D7651283A3BB8003E5468 /* Frameworks */,
 				7D4D7652283A3BB8003E5468 /* Resources */,
+				A761464B7CE1E854F962D748 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,12 +166,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4D7664283A3BBB003E5468 /* LaunchScreen.storyboard in Resources */,
+				7D4D7671283A577A003E5468 /* GoogleService-Info.plist in Resources */,
 				7D4D7661283A3BBB003E5468 /* Assets.xcassets in Resources */,
 				7D4D765F283A3BB8003E5468 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A761464B7CE1E854F962D748 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE21B7853FA419DD0766A2AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GLKRentCar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D4D7650283A3BB8003E5468 /* Sources */ = {
@@ -294,6 +366,7 @@
 		};
 		7D4D7669283A3BBB003E5468 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +395,7 @@
 		};
 		7D4D766A283A3BBB003E5468 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC38DD1243438655BBF9EC52 /* Pods-GLKRentCar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
