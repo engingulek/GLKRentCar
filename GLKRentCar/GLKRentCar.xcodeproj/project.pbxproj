@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3F18FC283AA2B200B3E389 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F18FB283AA2B200B3E389 /* HomePageViewController.swift */; };
+		7D3F18FE283AA49500B3E389 /* AdvertRentCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F18FD283AA49500B3E389 /* AdvertRentCarCell.swift */; };
 		7D4D7658283A3BB8003E5468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D7657283A3BB8003E5468 /* AppDelegate.swift */; };
 		7D4D765A283A3BB8003E5468 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */; };
 		7D4D765F283A3BB8003E5468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D765D283A3BB8003E5468 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLKRentCar.debug.xcconfig"; path = "Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar.debug.xcconfig"; sourceTree = "<group>"; };
+		7D3F18FB283AA2B200B3E389 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		7D3F18FD283AA49500B3E389 /* AdvertRentCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertRentCarCell.swift; sourceTree = "<group>"; };
 		7D4D7654283A3BB8003E5468 /* GLKRentCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKRentCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4D7657283A3BB8003E5468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,10 +94,20 @@
 		7D4D766B283A3C5D003E5468 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7D4D7674283AA198003E5468 /* cell */,
 				7D4D766C283A3CF6003E5468 /* CreateAccount.swift */,
 				7D4D766E283A4303003E5468 /* LogInPage.swift */,
+				7D3F18FB283AA2B200B3E389 /* HomePageViewController.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		7D4D7674283AA198003E5468 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7D3F18FD283AA49500B3E389 /* AdvertRentCarCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		AE7BDA8DF9426E73C5B459D3 /* Pods */ = {
@@ -222,8 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4D766F283A4303003E5468 /* LogInPage.swift in Sources */,
+				7D3F18FE283AA49500B3E389 /* AdvertRentCarCell.swift in Sources */,
 				7D4D7658283A3BB8003E5468 /* AppDelegate.swift in Sources */,
 				7D4D765A283A3BB8003E5468 /* SceneDelegate.swift in Sources */,
+				7D3F18FC283AA2B200B3E389 /* HomePageViewController.swift in Sources */,
 				7D4D766D283A3CF6003E5468 /* CreateAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +394,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,6 +424,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
