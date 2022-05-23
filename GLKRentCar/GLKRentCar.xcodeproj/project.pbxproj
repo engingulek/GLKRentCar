@@ -7,156 +7,138 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D3F18FC283AA2B200B3E389 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F18FB283AA2B200B3E389 /* HomePageViewController.swift */; };
-		7D3F18FE283AA49500B3E389 /* AdvertRentCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F18FD283AA49500B3E389 /* AdvertRentCarCell.swift */; };
-		7D4D7658283A3BB8003E5468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D7657283A3BB8003E5468 /* AppDelegate.swift */; };
-		7D4D765A283A3BB8003E5468 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */; };
-		7D4D765F283A3BB8003E5468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D765D283A3BB8003E5468 /* Main.storyboard */; };
-		7D4D7661283A3BBB003E5468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D7660283A3BBB003E5468 /* Assets.xcassets */; };
-		7D4D7664283A3BBB003E5468 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D7662283A3BBB003E5468 /* LaunchScreen.storyboard */; };
-		7D4D766D283A3CF6003E5468 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D766C283A3CF6003E5468 /* CreateAccount.swift */; };
-		7D4D766F283A4303003E5468 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D766E283A4303003E5468 /* LogInPage.swift */; };
-		7D4D7671283A577A003E5468 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4D7670283A577A003E5468 /* GoogleService-Info.plist */; };
-		F0D57C47C9420B8A7E160399 /* Pods_GLKRentCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE84547F843413D7EF5C6D2C /* Pods_GLKRentCar.framework */; };
+		7D280B0F283BFE27007D734A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B0E283BFE27007D734A /* AppDelegate.swift */; };
+		7D280B11283BFE27007D734A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B10283BFE27007D734A /* SceneDelegate.swift */; };
+		7D280B13283BFE27007D734A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B12283BFE27007D734A /* ViewController.swift */; };
+		7D280B16283BFE27007D734A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D280B14283BFE27007D734A /* Main.storyboard */; };
+		7D280B18283BFE27007D734A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D280B17283BFE27007D734A /* Assets.xcassets */; };
+		7D280B1B283BFE27007D734A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D280B19283BFE27007D734A /* LaunchScreen.storyboard */; };
+		7D280B24283BFE4C007D734A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7D280B23283BFE4C007D734A /* FirebaseAuth */; };
+		7D280B27283BFEAC007D734A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B26283BFEAC007D734A /* LoginPage.swift */; };
+		7D280B2A283BFFB9007D734A /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B29283BFFB9007D734A /* CreateAccount.swift */; };
+		7D280B2C283C0259007D734A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D280B2B283C0259007D734A /* GoogleService-Info.plist */; };
+		7D280B2E283C0472007D734A /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B2D283C0472007D734A /* HomePageVC.swift */; };
+		7D280B31283C04B5007D734A /* AdvertRentCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLKRentCar.debug.xcconfig"; path = "Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar.debug.xcconfig"; sourceTree = "<group>"; };
-		7D3F18FB283AA2B200B3E389 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		7D3F18FD283AA49500B3E389 /* AdvertRentCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertRentCarCell.swift; sourceTree = "<group>"; };
-		7D4D7654283A3BB8003E5468 /* GLKRentCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKRentCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D4D7657283A3BB8003E5468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D4D765E283A3BB8003E5468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D4D7660283A3BBB003E5468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7D4D7663283A3BBB003E5468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D4D7665283A3BBB003E5468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D4D766C283A3CF6003E5468 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
-		7D4D766E283A4303003E5468 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
-		7D4D7670283A577A003E5468 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EC38DD1243438655BBF9EC52 /* Pods-GLKRentCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLKRentCar.release.xcconfig"; path = "Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar.release.xcconfig"; sourceTree = "<group>"; };
-		EE84547F843413D7EF5C6D2C /* Pods_GLKRentCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLKRentCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D280B0B283BFE27007D734A /* GLKRentCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKRentCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D280B0E283BFE27007D734A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D280B10283BFE27007D734A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D280B12283BFE27007D734A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D280B15283BFE27007D734A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D280B17283BFE27007D734A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D280B1A283BFE27007D734A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D280B1C283BFE27007D734A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D280B26283BFEAC007D734A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		7D280B29283BFFB9007D734A /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		7D280B2B283C0259007D734A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D280B2D283C0472007D734A /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertRentCarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D4D7651283A3BB8003E5468 /* Frameworks */ = {
+		7D280B08283BFE27007D734A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0D57C47C9420B8A7E160399 /* Pods_GLKRentCar.framework in Frameworks */,
+				7D280B24283BFE4C007D734A /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7BA49221C6CC87A69715BC55 /* Frameworks */ = {
+		7D280B02283BFE26007D734A = {
 			isa = PBXGroup;
 			children = (
-				EE84547F843413D7EF5C6D2C /* Pods_GLKRentCar.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7D4D764B283A3BB8003E5468 = {
-			isa = PBXGroup;
-			children = (
-				7D4D7656283A3BB8003E5468 /* GLKRentCar */,
-				7D4D7655283A3BB8003E5468 /* Products */,
-				AE7BDA8DF9426E73C5B459D3 /* Pods */,
-				7BA49221C6CC87A69715BC55 /* Frameworks */,
+				7D280B0D283BFE27007D734A /* GLKRentCar */,
+				7D280B0C283BFE27007D734A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7D4D7655283A3BB8003E5468 /* Products */ = {
+		7D280B0C283BFE27007D734A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D4D7654283A3BB8003E5468 /* GLKRentCar.app */,
+				7D280B0B283BFE27007D734A /* GLKRentCar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D4D7656283A3BB8003E5468 /* GLKRentCar */ = {
+		7D280B0D283BFE27007D734A /* GLKRentCar */ = {
 			isa = PBXGroup;
 			children = (
-				7D4D766B283A3C5D003E5468 /* view */,
-				7D4D7657283A3BB8003E5468 /* AppDelegate.swift */,
-				7D4D7659283A3BB8003E5468 /* SceneDelegate.swift */,
-				7D4D765D283A3BB8003E5468 /* Main.storyboard */,
-				7D4D7670283A577A003E5468 /* GoogleService-Info.plist */,
-				7D4D7660283A3BBB003E5468 /* Assets.xcassets */,
-				7D4D7662283A3BBB003E5468 /* LaunchScreen.storyboard */,
-				7D4D7665283A3BBB003E5468 /* Info.plist */,
+				7D280B25283BFE89007D734A /* View */,
+				7D280B0E283BFE27007D734A /* AppDelegate.swift */,
+				7D280B10283BFE27007D734A /* SceneDelegate.swift */,
+				7D280B12283BFE27007D734A /* ViewController.swift */,
+				7D280B14283BFE27007D734A /* Main.storyboard */,
+				7D280B17283BFE27007D734A /* Assets.xcassets */,
+				7D280B2B283C0259007D734A /* GoogleService-Info.plist */,
+				7D280B19283BFE27007D734A /* LaunchScreen.storyboard */,
+				7D280B1C283BFE27007D734A /* Info.plist */,
 			);
 			path = GLKRentCar;
 			sourceTree = "<group>";
 		};
-		7D4D766B283A3C5D003E5468 /* view */ = {
+		7D280B25283BFE89007D734A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D4D7674283AA198003E5468 /* cell */,
-				7D4D766C283A3CF6003E5468 /* CreateAccount.swift */,
-				7D4D766E283A4303003E5468 /* LogInPage.swift */,
-				7D3F18FB283AA2B200B3E389 /* HomePageViewController.swift */,
+				7D280B2F283C049D007D734A /* Cell */,
+				7D280B26283BFEAC007D734A /* LoginPage.swift */,
+				7D280B29283BFFB9007D734A /* CreateAccount.swift */,
+				7D280B2D283C0472007D734A /* HomePageVC.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
-		7D4D7674283AA198003E5468 /* cell */ = {
+		7D280B2F283C049D007D734A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7D3F18FD283AA49500B3E389 /* AdvertRentCarCell.swift */,
+				7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */,
 			);
-			path = cell;
-			sourceTree = "<group>";
-		};
-		AE7BDA8DF9426E73C5B459D3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */,
-				EC38DD1243438655BBF9EC52 /* Pods-GLKRentCar.release.xcconfig */,
-			);
-			path = Pods;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D4D7653283A3BB8003E5468 /* GLKRentCar */ = {
+		7D280B0A283BFE27007D734A /* GLKRentCar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D4D7668283A3BBB003E5468 /* Build configuration list for PBXNativeTarget "GLKRentCar" */;
+			buildConfigurationList = 7D280B1F283BFE27007D734A /* Build configuration list for PBXNativeTarget "GLKRentCar" */;
 			buildPhases = (
-				BE21B7853FA419DD0766A2AF /* [CP] Check Pods Manifest.lock */,
-				7D4D7650283A3BB8003E5468 /* Sources */,
-				7D4D7651283A3BB8003E5468 /* Frameworks */,
-				7D4D7652283A3BB8003E5468 /* Resources */,
-				A761464B7CE1E854F962D748 /* [CP] Embed Pods Frameworks */,
+				7D280B07283BFE27007D734A /* Sources */,
+				7D280B08283BFE27007D734A /* Frameworks */,
+				7D280B09283BFE27007D734A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GLKRentCar;
+			packageProductDependencies = (
+				7D280B23283BFE4C007D734A /* FirebaseAuth */,
+			);
 			productName = GLKRentCar;
-			productReference = 7D4D7654283A3BB8003E5468 /* GLKRentCar.app */;
+			productReference = 7D280B0B283BFE27007D734A /* GLKRentCar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7D4D764C283A3BB8003E5468 /* Project object */ = {
+		7D280B03283BFE26007D734A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					7D4D7653283A3BB8003E5468 = {
+					7D280B0A283BFE27007D734A = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 7D4D764F283A3BB8003E5468 /* Build configuration list for PBXProject "GLKRentCar" */;
+			buildConfigurationList = 7D280B06283BFE26007D734A /* Build configuration list for PBXProject "GLKRentCar" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -164,101 +146,63 @@
 				en,
 				Base,
 			);
-			mainGroup = 7D4D764B283A3BB8003E5468;
-			productRefGroup = 7D4D7655283A3BB8003E5468 /* Products */;
+			mainGroup = 7D280B02283BFE26007D734A;
+			packageReferences = (
+				7D280B22283BFE4C007D734A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 7D280B0C283BFE27007D734A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D4D7653283A3BB8003E5468 /* GLKRentCar */,
+				7D280B0A283BFE27007D734A /* GLKRentCar */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D4D7652283A3BB8003E5468 /* Resources */ = {
+		7D280B09283BFE27007D734A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D4D7664283A3BBB003E5468 /* LaunchScreen.storyboard in Resources */,
-				7D4D7671283A577A003E5468 /* GoogleService-Info.plist in Resources */,
-				7D4D7661283A3BBB003E5468 /* Assets.xcassets in Resources */,
-				7D4D765F283A3BB8003E5468 /* Main.storyboard in Resources */,
+				7D280B1B283BFE27007D734A /* LaunchScreen.storyboard in Resources */,
+				7D280B2C283C0259007D734A /* GoogleService-Info.plist in Resources */,
+				7D280B18283BFE27007D734A /* Assets.xcassets in Resources */,
+				7D280B16283BFE27007D734A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A761464B7CE1E854F962D748 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLKRentCar/Pods-GLKRentCar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE21B7853FA419DD0766A2AF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GLKRentCar-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		7D4D7650283A3BB8003E5468 /* Sources */ = {
+		7D280B07283BFE27007D734A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D4D766F283A4303003E5468 /* LogInPage.swift in Sources */,
-				7D3F18FE283AA49500B3E389 /* AdvertRentCarCell.swift in Sources */,
-				7D4D7658283A3BB8003E5468 /* AppDelegate.swift in Sources */,
-				7D4D765A283A3BB8003E5468 /* SceneDelegate.swift in Sources */,
-				7D3F18FC283AA2B200B3E389 /* HomePageViewController.swift in Sources */,
-				7D4D766D283A3CF6003E5468 /* CreateAccount.swift in Sources */,
+				7D280B27283BFEAC007D734A /* LoginPage.swift in Sources */,
+				7D280B31283C04B5007D734A /* AdvertRentCarCell.swift in Sources */,
+				7D280B2A283BFFB9007D734A /* CreateAccount.swift in Sources */,
+				7D280B2E283C0472007D734A /* HomePageVC.swift in Sources */,
+				7D280B13283BFE27007D734A /* ViewController.swift in Sources */,
+				7D280B0F283BFE27007D734A /* AppDelegate.swift in Sources */,
+				7D280B11283BFE27007D734A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7D4D765D283A3BB8003E5468 /* Main.storyboard */ = {
+		7D280B14283BFE27007D734A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D4D765E283A3BB8003E5468 /* Base */,
+				7D280B15283BFE27007D734A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		7D4D7662283A3BBB003E5468 /* LaunchScreen.storyboard */ = {
+		7D280B19283BFE27007D734A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D4D7663283A3BBB003E5468 /* Base */,
+				7D280B1A283BFE27007D734A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -266,7 +210,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7D4D7666283A3BBB003E5468 /* Debug */ = {
+		7D280B1D283BFE27007D734A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -326,7 +270,7 @@
 			};
 			name = Debug;
 		};
-		7D4D7667283A3BBB003E5468 /* Release */ = {
+		7D280B1E283BFE27007D734A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -380,9 +324,8 @@
 			};
 			name = Release;
 		};
-		7D4D7669283A3BBB003E5468 /* Debug */ = {
+		7D280B20283BFE27007D734A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C8079AFE5BB94B74373EB56 /* Pods-GLKRentCar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,7 +337,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,13 +348,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		7D4D766A283A3BBB003E5468 /* Release */ = {
+		7D280B21283BFE27007D734A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC38DD1243438655BBF9EC52 /* Pods-GLKRentCar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,7 +365,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,32 +376,51 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D4D764F283A3BB8003E5468 /* Build configuration list for PBXProject "GLKRentCar" */ = {
+		7D280B06283BFE26007D734A /* Build configuration list for PBXProject "GLKRentCar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D4D7666283A3BBB003E5468 /* Debug */,
-				7D4D7667283A3BBB003E5468 /* Release */,
+				7D280B1D283BFE27007D734A /* Debug */,
+				7D280B1E283BFE27007D734A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D4D7668283A3BBB003E5468 /* Build configuration list for PBXNativeTarget "GLKRentCar" */ = {
+		7D280B1F283BFE27007D734A /* Build configuration list for PBXNativeTarget "GLKRentCar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D4D7669283A3BBB003E5468 /* Debug */,
-				7D4D766A283A3BBB003E5468 /* Release */,
+				7D280B20283BFE27007D734A /* Debug */,
+				7D280B21283BFE27007D734A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D280B22283BFE4C007D734A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D280B23283BFE4C007D734A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D280B22283BFE4C007D734A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 7D4D764C283A3BB8003E5468 /* Project object */;
+	rootObject = 7D280B03283BFE26007D734A /* Project object */;
 }

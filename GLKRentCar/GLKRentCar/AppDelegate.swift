@@ -2,12 +2,11 @@
 //  AppDelegate.swift
 //  GLKRentCar
 //
-//  Created by engin gülek on 22.05.2022.
+//  Created by engin gülek on 23.05.2022.
 //
 
 import UIKit
 import FirebaseCore
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,13 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-      
-        
         return true
     }
 
-   
-  
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
