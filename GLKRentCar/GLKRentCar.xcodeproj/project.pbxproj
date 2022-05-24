@@ -19,6 +19,11 @@
 		7D280B2C283C0259007D734A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D280B2B283C0259007D734A /* GoogleService-Info.plist */; };
 		7D280B2E283C0472007D734A /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B2D283C0472007D734A /* HomePageVC.swift */; };
 		7D280B31283C04B5007D734A /* AdvertRentCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */; };
+		7D696951283CEBD1002C332C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7D696950283CEBD1002C332C /* Alamofire */; };
+		7D696954283CED01002C332C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D696953283CED01002C332C /* NetworkManager.swift */; };
+		7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC4283C2F35003E7383 /* Carinfo.swift */; };
+		7DCA7FC9283C3062003E7383 /* Carrentadvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */; };
+		7DCA7FCE283C3446003E7383 /* CarRentAdvertListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FCD283C3446003E7383 /* CarRentAdvertListVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,10 @@
 		7D280B2B283C0259007D734A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D280B2D283C0472007D734A /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertRentCarCell.swift; sourceTree = "<group>"; };
+		7D696953283CED01002C332C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7DCA7FC4283C2F35003E7383 /* Carinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carinfo.swift; sourceTree = "<group>"; };
+		7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrentadvert.swift; sourceTree = "<group>"; };
+		7DCA7FCD283C3446003E7383 /* CarRentAdvertListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentAdvertListVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D280B24283BFE4C007D734A /* FirebaseAuth in Frameworks */,
+				7D696951283CEBD1002C332C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +78,9 @@
 		7D280B0D283BFE27007D734A /* GLKRentCar */ = {
 			isa = PBXGroup;
 			children = (
+				7D696952283CECED002C332C /* Service */,
+				7DCA7FCA283C33D2003E7383 /* ViewModel */,
+				7DCA7FBF283C2855003E7383 /* Model */,
 				7D280B25283BFE89007D734A /* View */,
 				7D280B0E283BFE27007D734A /* AppDelegate.swift */,
 				7D280B10283BFE27007D734A /* SceneDelegate.swift */,
@@ -100,6 +113,31 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7D696952283CECED002C332C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7D696953283CED01002C332C /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7DCA7FBF283C2855003E7383 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DCA7FC4283C2F35003E7383 /* Carinfo.swift */,
+				7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7DCA7FCA283C33D2003E7383 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DCA7FCD283C3446003E7383 /* CarRentAdvertListVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +156,7 @@
 			name = GLKRentCar;
 			packageProductDependencies = (
 				7D280B23283BFE4C007D734A /* FirebaseAuth */,
+				7D696950283CEBD1002C332C /* Alamofire */,
 			);
 			productName = GLKRentCar;
 			productReference = 7D280B0B283BFE27007D734A /* GLKRentCar.app */;
@@ -149,6 +188,7 @@
 			mainGroup = 7D280B02283BFE26007D734A;
 			packageReferences = (
 				7D280B22283BFE4C007D734A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7D69694F283CEBD1002C332C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7D280B0C283BFE27007D734A /* Products */;
 			projectDirPath = "";
@@ -178,12 +218,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D696954283CED01002C332C /* NetworkManager.swift in Sources */,
 				7D280B27283BFEAC007D734A /* LoginPage.swift in Sources */,
 				7D280B31283C04B5007D734A /* AdvertRentCarCell.swift in Sources */,
+				7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */,
 				7D280B2A283BFFB9007D734A /* CreateAccount.swift in Sources */,
 				7D280B2E283C0472007D734A /* HomePageVC.swift in Sources */,
 				7D280B13283BFE27007D734A /* ViewController.swift in Sources */,
+				7DCA7FCE283C3446003E7383 /* CarRentAdvertListVM.swift in Sources */,
 				7D280B0F283BFE27007D734A /* AppDelegate.swift in Sources */,
+				7DCA7FC9283C3062003E7383 /* Carrentadvert.swift in Sources */,
 				7D280B11283BFE27007D734A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +456,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		7D69694F283CEBD1002C332C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -419,6 +471,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D280B22283BFE4C007D734A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		7D696950283CEBD1002C332C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D69694F283CEBD1002C332C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
