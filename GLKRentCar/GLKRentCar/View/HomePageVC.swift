@@ -7,18 +7,53 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 
 class HomePageVC : UIViewController{
    
     
+    
     @IBOutlet weak var advertRentCarCollectionView : UICollectionView!
+    private var carRentAdvertVMList  = CarRentAdvertListViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         advertRentCarCollectionView.delegate = self
         advertRentCarCollectionView.dataSource = self
       setupUI()
+        getDataAdvertList()
     }
+    
+    func getDataAdvertList(){
+        NetworkManager().fetch(url: "http://localhost:3000/carRentAdvertList"
+                               , method:.get,requestModel: nil
+                               , model: Carrentadvertresult.self)
+        {response in
+            
+            
+            switch (response){
+            case .success(let model):
+                let model = model as! Carrentadvertresult
+                self.carRentAdvertVMList.carRentAdvertList = model.carAdvertList.map(CartRentAdvertViewModel.init)
+                DispatchQueue.main.async {
+                    self.advertRentCarCollectionView.reloadData()
+                   let count = self.carRentAdvertVMList.numberOfItemsInSection()
+                }
+        
+                
+                
+                break
+                
+            case .failure(_):break
+                
+            }
+            
+            
+        }
+       
+     
+    
+}
     
 
     
@@ -28,11 +63,14 @@ class HomePageVC : UIViewController{
 
 extension HomePageVC :  UICollectionViewDelegate, UICollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.carRentAdvertVMList.numberOfItemsInSection()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = advertRentCarCollectionView.dequeueReusableCell(withReuseIdentifier: "advertRentCarCell", for: indexPath) as! AdvertRentCarCell
+        let advert = self.carRentAdvertVMList.cellForItemAt(indexPath.row)
+        
+        
         
         
         cell.layer.cornerRadius = 10
@@ -52,4 +90,9 @@ extension HomePageVC :  UICollectionViewDelegate, UICollectionViewDataSource  {
         self.advertRentCarCollectionView.collectionViewLayout = design
     }
     
+}
+
+extension HomePageVC {
+    // get all advert data from database
+
 }

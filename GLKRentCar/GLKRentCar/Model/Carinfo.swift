@@ -9,7 +9,6 @@ import Foundation
 
 
 struct Carinfo : Codable {
-    var _id:String
     var carName:String
     var carImage:String
     var carModel: String

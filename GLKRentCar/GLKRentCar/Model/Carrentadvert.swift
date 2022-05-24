@@ -11,7 +11,7 @@ import Foundation
 struct Carrentadvert : Codable {
     var _id:String
     var advertUserId:String
-    var carInfo : Carinfo
+    var carModel : Carinfo
     var carRentMinuteCost :Int
     var carGasolineState : Int
     var carAdvertDescription : String

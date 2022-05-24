@@ -36,7 +36,7 @@ struct CartRentAdvertViewModel {
     }
     
     var carInfo : Carinfo{
-        return carRentAdvert.carInfo
+        return carRentAdvert.carModel
     }
     var carRentMinuteCost :Int {
         return carRentAdvert.carRentMinuteCost
