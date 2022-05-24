@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import Alamofire
-
+import Kingfisher
 
 class HomePageVC : UIViewController{
    
@@ -69,6 +69,12 @@ extension HomePageVC :  UICollectionViewDelegate, UICollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = advertRentCarCollectionView.dequeueReusableCell(withReuseIdentifier: "advertRentCarCell", for: indexPath) as! AdvertRentCarCell
         let advert = self.carRentAdvertVMList.cellForItemAt(indexPath.row)
+        cell.advertCarName.text = advert.carInfo.carName
+        cell.advertCarModel.text = advert.carInfo.carModel
+        cell.advertCarCost.text = "₺\(advert.carRentMinuteCost)/dk"
+        let url = URL(string: "\(advert.carInfo.carImage)")
+        cell.advertCarImage.kf.setImage(with: url)
+        
         
         
         

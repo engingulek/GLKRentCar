@@ -151,6 +151,12 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="411" height="110"/>
+                                        <connections>
+                                            <outlet property="advertCarCost" destination="g9B-fe-T9a" id="78Z-1N-WCx"/>
+                                            <outlet property="advertCarImage" destination="xWr-Wa-Urg" id="8IT-0u-5qG"/>
+                                            <outlet property="advertCarModel" destination="x0h-3V-LoQ" id="vQZ-Iz-owz"/>
+                                            <outlet property="advertCarName" destination="xAD-8Y-YGR" id="l96-2F-mIg"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

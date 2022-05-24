@@ -23,6 +23,7 @@
 		7D696954283CED01002C332C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D696953283CED01002C332C /* NetworkManager.swift */; };
 		7D696957283CF04A002C332C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7D696956283CF04A002C332C /* SwiftyJSON */; };
 		7D696959283CF71A002C332C /* Carrentadvertresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D696958283CF71A002C332C /* Carrentadvertresult.swift */; };
+		7D69695C283D2B2A002C332C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D69695B283D2B2A002C332C /* Kingfisher */; };
 		7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC4283C2F35003E7383 /* Carinfo.swift */; };
 		7DCA7FC9283C3062003E7383 /* Carrentadvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */; };
 		7DCA7FCE283C3446003E7383 /* CarRentAdvertListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FCD283C3446003E7383 /* CarRentAdvertListVM.swift */; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D69695C283D2B2A002C332C /* Kingfisher in Frameworks */,
 				7D696957283CF04A002C332C /* SwiftyJSON in Frameworks */,
 				7D280B24283BFE4C007D734A /* FirebaseAuth in Frameworks */,
 				7D696951283CEBD1002C332C /* Alamofire in Frameworks */,
@@ -163,6 +165,7 @@
 				7D280B23283BFE4C007D734A /* FirebaseAuth */,
 				7D696950283CEBD1002C332C /* Alamofire */,
 				7D696956283CF04A002C332C /* SwiftyJSON */,
+				7D69695B283D2B2A002C332C /* Kingfisher */,
 			);
 			productName = GLKRentCar;
 			productReference = 7D280B0B283BFE27007D734A /* GLKRentCar.app */;
@@ -196,6 +199,7 @@
 				7D280B22283BFE4C007D734A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				7D69694F283CEBD1002C332C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7D696955283CF049002C332C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7D69695A283D2B2A002C332C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 7D280B0C283BFE27007D734A /* Products */;
 			projectDirPath = "";
@@ -480,6 +484,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		7D69695A283D2B2A002C332C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -497,6 +509,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D696955283CF049002C332C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		7D69695B283D2B2A002C332C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D69695A283D2B2A002C332C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
