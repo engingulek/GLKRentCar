@@ -12,4 +12,5 @@ struct Carinfo : Codable {
     var carName:String
     var carImage:String
     var carModel: String
+    var carPlate:String
 }
