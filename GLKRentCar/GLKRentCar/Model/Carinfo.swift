@@ -13,4 +13,5 @@ struct Carinfo : Codable {
     var carImage:String
     var carModel: String
     var carPlate:String
+    var carGearType:String
 }

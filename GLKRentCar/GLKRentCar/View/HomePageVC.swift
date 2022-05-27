@@ -17,7 +17,8 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate,CLLocationManager
     @IBOutlet weak var advertCarName: UILabel!
     @IBOutlet weak var advertCarModel: UILabel!
     @IBOutlet weak var advertCarPlate: UILabel!
-    
+    var  distanceCarLocationFromMyLocation = [String:Double]()
+    var lastLocation: CLLocation!
     @IBOutlet weak var advertCarImage: UIImageView!
     private var carRentAdvertVMList  = CarRentAdvertListViewModel()
     let manager = CLLocationManager()
@@ -40,7 +41,7 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate,CLLocationManager
         
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let lastLocation = locations[locations.count-1]
+       lastLocation = locations[locations.count-1]
         myCoordinate(lastLocation)
     }
     
@@ -57,25 +58,37 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate,CLLocationManager
     
   
     
+    func calculatorDistance() {
+        for advert in self.carRentAdvertVMList.carRentAdvertList {
+            let carLocation = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)
+            /// CLLocationDistance to Double
+            let distance = (carLocation.distance(from: lastLocation)*1000)/1000
+            
+            distanceCarLocationFromMyLocation[advert.advertId] = distance
+            
+        }
+    }
     
     
-        // read data to ui
+        // read data nearest car advert
    func readDataToUI(){
-       let advertCount = carRentAdvertVMList.numberOfItemsInSection()
-       print("Advert Count \(advertCount)")
+       calculatorDistance()
+       let sortResult = distanceCarLocationFromMyLocation.sorted(by: {$0.0 < $1.0})
+          let nearestCar = sortResult[0]
        for advert in self.carRentAdvertVMList.carRentAdvertList {
-           print("Test advert \(advert.carInfo.carName)")
-           self.advertCarName.text = advert.carInfo.carName
-           self.advertCarName.text = advert.carInfo.carName
-           self.advertCarModel.text = advert.carInfo.carModel
-           self.advertCarPlate.text = advert.carInfo.carPlate
-           
-           let url = URL(string: "\(advert.carInfo.carImage)")
-           self.advertCarImage.kf.setImage(with: url)
+           if nearestCar.key == advert.advertId {
+               // read data to ui
+               self.advertCarName.text = advert.carInfo.carName
+               self.advertCarName.text = advert.carInfo.carName
+               self.advertCarModel.text = advert.carInfo.carModel
+               self.advertCarPlate.text = advert.carInfo.carPlate
+               
+               let url = URL(string: "\(advert.carInfo.carImage)")
+               self.advertCarImage.kf.setImage(with: url)
+               
+           }
            carCoordinates(carLocationLatitude: advert.carLocationLatitude,carLocationLongtude: advert.carLocationLongtude,carName:advert.carInfo.carName)
-           
        }
-     
     }
     
     func carCoordinates(carLocationLatitude:String,carLocationLongtude:String,carName:String) {
