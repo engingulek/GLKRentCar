@@ -114,10 +114,68 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Rent Car">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rentCarAction:" destination="fTD-h8-xaY" eventType="touchUpInside" id="aer-wn-RN5"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R00-9h-wfF">
                                         <rect key="frame" x="22" y="158" width="370" height="123"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gas" translatesAutoresizingMaskIntoConstraints="NO" id="h13-MW-vSw">
+                                                <rect key="frame" x="163.5" y="28" width="43" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="TuX-Le-jxZ"/>
+                                                    <constraint firstAttribute="height" constant="37" id="gzi-zR-U28"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XH-HT-ksZ">
+                                                <rect key="frame" x="164" y="73" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loc" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-hd-Wc7">
+                                                <rect key="frame" x="30" y="28" width="43" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="2Dn-Qa-Uoe"/>
+                                                    <constraint firstAttribute="height" constant="37" id="o65-24-Fb7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-g6-X72">
+                                                <rect key="frame" x="30" y="73" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearbox" translatesAutoresizingMaskIntoConstraints="NO" id="9Fi-kM-B3i">
+                                                <rect key="frame" x="297" y="28" width="43" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="C1X-5i-cOT"/>
+                                                    <constraint firstAttribute="width" constant="43" id="yPs-w8-jby"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCx-Go-RaS">
+                                                <rect key="frame" x="298" y="73" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <constraints>
+                                            <constraint firstItem="NHt-hd-Wc7" firstAttribute="top" secondItem="R00-9h-wfF" secondAttribute="top" constant="28" id="6HS-xx-JmM"/>
+                                            <constraint firstItem="qCx-Go-RaS" firstAttribute="top" secondItem="9Fi-kM-B3i" secondAttribute="bottom" constant="8" symbolic="YES" id="Cbm-fE-9Dd"/>
+                                            <constraint firstItem="h13-MW-vSw" firstAttribute="centerX" secondItem="R00-9h-wfF" secondAttribute="centerX" id="HQU-P3-fl6"/>
+                                            <constraint firstItem="1XH-HT-ksZ" firstAttribute="centerX" secondItem="R00-9h-wfF" secondAttribute="centerX" id="MN0-Ks-GbQ"/>
+                                            <constraint firstItem="dK3-g6-X72" firstAttribute="top" secondItem="NHt-hd-Wc7" secondAttribute="bottom" constant="8" symbolic="YES" id="MTV-Ra-zSV"/>
+                                            <constraint firstAttribute="trailing" secondItem="qCx-Go-RaS" secondAttribute="trailing" constant="30" id="Rch-MD-lts"/>
+                                            <constraint firstItem="NHt-hd-Wc7" firstAttribute="leading" secondItem="R00-9h-wfF" secondAttribute="leading" constant="30" id="gRy-4y-7Wm"/>
+                                            <constraint firstItem="h13-MW-vSw" firstAttribute="top" secondItem="R00-9h-wfF" secondAttribute="top" constant="28" id="llR-jN-3yc"/>
+                                            <constraint firstItem="dK3-g6-X72" firstAttribute="leading" secondItem="R00-9h-wfF" secondAttribute="leading" constant="30" id="sdt-yP-9RG"/>
+                                            <constraint firstItem="1XH-HT-ksZ" firstAttribute="top" secondItem="h13-MW-vSw" secondAttribute="bottom" constant="8" symbolic="YES" id="tXU-4E-pIm"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Fi-kM-B3i" secondAttribute="trailing" constant="30" id="xj3-La-Vz2"/>
+                                            <constraint firstItem="9Fi-kM-B3i" firstAttribute="top" secondItem="R00-9h-wfF" secondAttribute="top" constant="28" id="yM0-QI-fra"/>
+                                        </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y3E-g0-shh">
                                         <rect key="frame" x="27" y="33" width="142" height="115.5"/>
@@ -167,13 +225,16 @@
                         <outlet property="advertCarName" destination="hul-zM-6ga" id="rUB-Oo-LJq"/>
                         <outlet property="advertCarPlate" destination="e9l-C7-mjc" id="a4y-mI-Mcv"/>
                         <outlet property="detailView" destination="chr-qm-FJk" id="kpy-42-hhf"/>
+                        <outlet property="gaOilLabel" destination="1XH-HT-ksZ" id="XR4-bI-gTt"/>
+                        <outlet property="gearTypeLabel" destination="qCx-Go-RaS" id="KUQ-9C-Icr"/>
+                        <outlet property="locLabel" destination="dK3-g6-X72" id="t8m-w5-qFR"/>
                         <outlet property="mapView" destination="5MN-SA-Jv9" id="HdC-KU-34B"/>
                         <outlet property="orderDetail" destination="R00-9h-wfF" id="y5x-X9-pvz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVH-ls-AnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="1037"/>
+            <point key="canvasLocation" x="-84.057971014492765" y="1036.6071428571429"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="315-KV-tfS">
@@ -244,6 +305,9 @@
     </scenes>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
+        <image name="gas" width="512" height="512"/>
+        <image name="gearbox" width="512" height="512"/>
+        <image name="loc" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
