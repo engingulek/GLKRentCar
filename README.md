@@ -3,4 +3,4 @@ Rental Car App for  ios app
 <h4>First Design -> Advert Details</h4>
 
 
-<img width="366" alt="Ekran Resmi 2022-05-25 01 55 45" src="https://user-images.githubusercontent.com/74055938/170145076-75dda281-6f92-4a8a-bdde-6cc03fe4041c.png">
+<img width="386" alt="Ekran Resmi 2022-05-27 22 48 36" src="https://user-images.githubusercontent.com/74055938/170780291-f27bc777-6db7-452e-9e55-56312078bfc2.png">
