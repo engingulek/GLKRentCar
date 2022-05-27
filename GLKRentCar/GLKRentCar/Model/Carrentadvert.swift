@@ -15,7 +15,6 @@ struct Carrentadvert : Codable {
     var carRentMinuteCost :Int
     var carGasolineState : Int
     var carAdvertDescription : String
-    var carLocaitonMinute : Int
     var carLocationLongtude : String
     var carLocationLatitude : String
 }

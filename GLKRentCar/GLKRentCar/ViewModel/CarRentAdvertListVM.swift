@@ -47,9 +47,7 @@ struct CartRentAdvertViewModel {
     var carAdvertDescription : String{
         return carRentAdvert.carAdvertDescription
     }
-    var carLocaitonMinute : Int{
-        return carRentAdvert.carLocaitonMinute
-    }
+   
     var carLocationLongtude : String{
         return carRentAdvert.carLocationLongtude
     }

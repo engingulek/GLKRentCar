@@ -1,104 +1,171 @@
 //
-//  HomePageViewController.swift
+//  CarRentAdvertDetails.swift
 //  GLKRentCar
 //
-//  Created by engin gülek on 22.05.2022.
+//  Created by engin gülek on 24.05.2022.
 //
 
 import Foundation
 import UIKit
-import Alamofire
+import MapKit
+import CoreLocation
 import Kingfisher
-
-class HomePageVC : UIViewController{
-   
+class HomePageVC:UIViewController, UIGestureRecognizerDelegate,CLLocationManagerDelegate {
+    @IBOutlet weak var orderDetail: UIView!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var advertCarName: UILabel!
+    @IBOutlet weak var advertCarModel: UILabel!
+    @IBOutlet weak var advertCarPlate: UILabel!
     
-    
-    @IBOutlet weak var advertRentCarCollectionView : UICollectionView!
+    @IBOutlet weak var advertCarImage: UIImageView!
     private var carRentAdvertVMList  = CarRentAdvertListViewModel()
+    let manager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        advertRentCarCollectionView.delegate = self
-        advertRentCarCollectionView.dataSource = self
-      setupUI()
+        
         getDataAdvertList()
+        
+       // navigationCarLocationFromMyLocation()
+       
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.delegate = self
+    manager.requestWhenInUseAuthorization()
+       manager.startUpdatingLocation()
+        
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let lastLocation = locations[locations.count-1]
+        myCoordinate(lastLocation)
+    }
+    
+    
+    func myCoordinate(_ mylocation:CLLocation) {
+        let location = CLLocationCoordinate2D(latitude: mylocation.coordinate.latitude, longitude: mylocation.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let areaMyLocation = MKCoordinateRegion(center: location, span: span)
+        self.mapView.setRegion(areaMyLocation, animated: true)
+       
+        print("My Loc \(mylocation.coordinate.latitude) \(mylocation.coordinate.longitude)")
+    }
+    
+    
+  
+    
+    
+    
+        // read data to ui
+   func readDataToUI(){
+       let advertCount = carRentAdvertVMList.numberOfItemsInSection()
+       print("Advert Count \(advertCount)")
+       for advert in self.carRentAdvertVMList.carRentAdvertList {
+           print("Test advert \(advert.carInfo.carName)")
+           self.advertCarName.text = advert.carInfo.carName
+           self.advertCarName.text = advert.carInfo.carName
+           self.advertCarModel.text = advert.carInfo.carModel
+           self.advertCarPlate.text = advert.carInfo.carPlate
+           
+           let url = URL(string: "\(advert.carInfo.carImage)")
+           self.advertCarImage.kf.setImage(with: url)
+           carCoordinates(carLocationLatitude: advert.carLocationLatitude,carLocationLongtude: advert.carLocationLongtude,carName:advert.carInfo.carName)
+           
+       }
+     
+    }
+    
+    func carCoordinates(carLocationLatitude:String,carLocationLongtude:String,carName:String) {
+        
+        let location = CLLocationCoordinate2D(latitude: Double(carLocationLatitude)!, longitude: Double(carLocationLongtude)!)
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let areaMyLocation = MKCoordinateRegion(center: location, span: span)
+        self.mapView.setRegion(areaMyLocation, animated: true)
+        
+        let pinCar = MKPointAnnotation()
+         pinCar.coordinate = location
+         pinCar.title = carName
+         mapView.addAnnotation(pinCar)
+        
+       
+         
+        
+    }
+    
+    
+    
+    
+    
+    
+    // car locaition
+   /* func navigationCarLocationFromMyLocation() {
+        
+        let locationCar = CLLocationCoordinate2D(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)! )
+        print("Car Loc \(advert.carLocationLatitude) \(advert.carLocationLongtude)")
+        let spanCar = MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
+        let areaCar = MKCoordinateRegion(center: locationCar, span: spanCar)
+        self.mapView.setRegion(areaCar, animated: true)
+        
+        // car location pin
+       let pinCar = MKPointAnnotation()
+        pinCar.coordinate = locationCar
+        pinCar.title = "Car Location"
+        mapView.addAnnotation(pinCar)
+        
+        
+        
+        
+      
+        
+        
+    }*/
+    
+    
     
     func getDataAdvertList(){
         NetworkManager().fetch(url: "http://localhost:3000/carRentAdvertList"
                                , method:.get,requestModel: nil
                                , model: Carrentadvertresult.self)
         {response in
-            
-            
             switch (response){
             case .success(let model):
                 let model = model as! Carrentadvertresult
                 self.carRentAdvertVMList.carRentAdvertList = model.carAdvertList.map(CartRentAdvertViewModel.init)
                 DispatchQueue.main.async {
-                    self.advertRentCarCollectionView.reloadData()
-                   let count = self.carRentAdvertVMList.numberOfItemsInSection()
+                    self.mapView.reloadInputViews()
+                    
+                    self.readDataToUI()
+                    
+                    let advertCountA = self.carRentAdvertVMList.numberOfItemsInSection()
+                    print("Advert Count \(advertCountA)")
                 }
-        
-                
-                
-                break
-                
             case .failure(_):break
-                
+                }
             }
-            
-            
-        }
-       
-     
-    
-}
-    
-
+       }
     
     
-}
-
-
-extension HomePageVC :  UICollectionViewDelegate, UICollectionViewDataSource  {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.carRentAdvertVMList.numberOfItemsInSection()
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        detailView.layer.cornerRadius = 45
+        detailView.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
+        
+        orderDetail.layer.cornerRadius = 20
+        orderDetail.layer.borderWidth = 1
+        orderDetail.layer.borderColor = UIColor.lightGray.cgColor
+        orderDetail.layer.shadowColor = UIColor.lightGray.cgColor
+        orderDetail.layer.shadowOpacity = 0.6
+        orderDetail.layer.shadowOffset = .zero
+        orderDetail.layer.shadowRadius = 10
     }
+   
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = advertRentCarCollectionView.dequeueReusableCell(withReuseIdentifier: "advertRentCarCell", for: indexPath) as! AdvertRentCarCell
-        let advert = self.carRentAdvertVMList.cellForItemAt(indexPath.row)
-        cell.advertCarName.text = advert.carInfo.carName
-        cell.advertCarModel.text = advert.carInfo.carModel
-        cell.advertCarCost.text = "₺\(advert.carRentMinuteCost)/dk"
-        let url = URL(string: "\(advert.carInfo.carImage)")
-        cell.advertCarImage.kf.setImage(with: url)
-        
-        
-        
-        
-        
-        cell.layer.cornerRadius = 10
-        
-        return cell
-        
-    }
-    
-    func setupUI(){
-        let design : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let screenWith = UIScreen.main.bounds.width
-        let cellWidth = screenWith - 10
-        design.itemSize = CGSize(width: cellWidth, height: 110)
-        design.minimumLineSpacing = 25
-        
-        
-        self.advertRentCarCollectionView.collectionViewLayout = design
-    }
     
 }
 
-extension HomePageVC {
-    // get all advert data from database
 
-}

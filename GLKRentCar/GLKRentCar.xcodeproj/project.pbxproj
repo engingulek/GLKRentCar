@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D156DDF283FB36B00FCEB82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D156DDE283FB36B00FCEB82 /* MapKit.framework */; };
 		7D280B0F283BFE27007D734A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B0E283BFE27007D734A /* AppDelegate.swift */; };
 		7D280B11283BFE27007D734A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B10283BFE27007D734A /* SceneDelegate.swift */; };
 		7D280B13283BFE27007D734A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B12283BFE27007D734A /* ViewController.swift */; };
@@ -17,20 +18,20 @@
 		7D280B27283BFEAC007D734A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B26283BFEAC007D734A /* LoginPage.swift */; };
 		7D280B2A283BFFB9007D734A /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B29283BFFB9007D734A /* CreateAccount.swift */; };
 		7D280B2C283C0259007D734A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D280B2B283C0259007D734A /* GoogleService-Info.plist */; };
-		7D280B2E283C0472007D734A /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B2D283C0472007D734A /* HomePageVC.swift */; };
-		7D280B31283C04B5007D734A /* AdvertRentCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */; };
 		7D696951283CEBD1002C332C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7D696950283CEBD1002C332C /* Alamofire */; };
 		7D696954283CED01002C332C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D696953283CED01002C332C /* NetworkManager.swift */; };
 		7D696957283CF04A002C332C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7D696956283CF04A002C332C /* SwiftyJSON */; };
 		7D696959283CF71A002C332C /* Carrentadvertresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D696958283CF71A002C332C /* Carrentadvertresult.swift */; };
 		7D69695C283D2B2A002C332C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D69695B283D2B2A002C332C /* Kingfisher */; };
-		7D69695E283D3D4E002C332C /* CarRentAdvertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69695D283D3D4E002C332C /* CarRentAdvertDetails.swift */; };
+		7D69695E283D3D4E002C332C /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69695D283D3D4E002C332C /* HomePageVC.swift */; };
+		7DB88A3C2840C356008F6F02 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB88A3B2840C356008F6F02 /* CoreLocation.framework */; };
 		7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC4283C2F35003E7383 /* Carinfo.swift */; };
 		7DCA7FC9283C3062003E7383 /* Carrentadvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */; };
 		7DCA7FCE283C3446003E7383 /* CarRentAdvertListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FCD283C3446003E7383 /* CarRentAdvertListVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D156DDE283FB36B00FCEB82 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7D280B0B283BFE27007D734A /* GLKRentCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKRentCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D280B0E283BFE27007D734A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D280B10283BFE27007D734A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,11 +43,10 @@
 		7D280B26283BFEAC007D734A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		7D280B29283BFFB9007D734A /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		7D280B2B283C0259007D734A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7D280B2D283C0472007D734A /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
-		7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertRentCarCell.swift; sourceTree = "<group>"; };
 		7D696953283CED01002C332C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7D696958283CF71A002C332C /* Carrentadvertresult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrentadvertresult.swift; sourceTree = "<group>"; };
-		7D69695D283D3D4E002C332C /* CarRentAdvertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentAdvertDetails.swift; sourceTree = "<group>"; };
+		7D69695D283D3D4E002C332C /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		7DB88A3B2840C356008F6F02 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7DCA7FC4283C2F35003E7383 /* Carinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carinfo.swift; sourceTree = "<group>"; };
 		7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrentadvert.swift; sourceTree = "<group>"; };
 		7DCA7FCD283C3446003E7383 /* CarRentAdvertListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentAdvertListVM.swift; sourceTree = "<group>"; };
@@ -57,8 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB88A3C2840C356008F6F02 /* CoreLocation.framework in Frameworks */,
 				7D69695C283D2B2A002C332C /* Kingfisher in Frameworks */,
 				7D696957283CF04A002C332C /* SwiftyJSON in Frameworks */,
+				7D156DDF283FB36B00FCEB82 /* MapKit.framework in Frameworks */,
 				7D280B24283BFE4C007D734A /* FirebaseAuth in Frameworks */,
 				7D696951283CEBD1002C332C /* Alamofire in Frameworks */,
 			);
@@ -67,11 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D156DDD283FB36B00FCEB82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DB88A3B2840C356008F6F02 /* CoreLocation.framework */,
+				7D156DDE283FB36B00FCEB82 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D280B02283BFE26007D734A = {
 			isa = PBXGroup;
 			children = (
 				7D280B0D283BFE27007D734A /* GLKRentCar */,
 				7D280B0C283BFE27007D734A /* Products */,
+				7D156DDD283FB36B00FCEB82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,8 +120,7 @@
 				7D280B2F283C049D007D734A /* Cell */,
 				7D280B26283BFEAC007D734A /* LoginPage.swift */,
 				7D280B29283BFFB9007D734A /* CreateAccount.swift */,
-				7D280B2D283C0472007D734A /* HomePageVC.swift */,
-				7D69695D283D3D4E002C332C /* CarRentAdvertDetails.swift */,
+				7D69695D283D3D4E002C332C /* HomePageVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,7 +128,6 @@
 		7D280B2F283C049D007D734A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7D280B30283C04B5007D734A /* AdvertRentCarCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -234,15 +244,13 @@
 			files = (
 				7D696954283CED01002C332C /* NetworkManager.swift in Sources */,
 				7D280B27283BFEAC007D734A /* LoginPage.swift in Sources */,
-				7D280B31283C04B5007D734A /* AdvertRentCarCell.swift in Sources */,
 				7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */,
 				7D280B2A283BFFB9007D734A /* CreateAccount.swift in Sources */,
-				7D280B2E283C0472007D734A /* HomePageVC.swift in Sources */,
 				7D280B13283BFE27007D734A /* ViewController.swift in Sources */,
 				7DCA7FCE283C3446003E7383 /* CarRentAdvertListVM.swift in Sources */,
 				7D696959283CF71A002C332C /* Carrentadvertresult.swift in Sources */,
 				7D280B0F283BFE27007D734A /* AppDelegate.swift in Sources */,
-				7D69695E283D3D4E002C332C /* CarRentAdvertDetails.swift in Sources */,
+				7D69695E283D3D4E002C332C /* HomePageVC.swift in Sources */,
 				7DCA7FC9283C3062003E7383 /* Carrentadvert.swift in Sources */,
 				7D280B11283BFE27007D734A /* SceneDelegate.swift in Sources */,
 			);
