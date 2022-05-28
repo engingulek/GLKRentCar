@@ -20,10 +20,17 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var locLabel: UILabel!
     @IBOutlet weak var gaOilLabel: UILabel!
     @IBOutlet weak var gearTypeLabel: UILabel!
+    
+    @IBOutlet weak var latLabel: UILabel!
+    
+    @IBOutlet weak var logLabel: UILabel!
+    
     var  distanceCarLocationFromMyLocation = [String:Double]()
     var latitude = Double()
     var longitude = Double()
     var lastLocation: CLLocation!
+    var carLocation : CLLocation?
+    var selectedCarLocation:CLLocation!
     @IBOutlet weak var advertCarImage: UIImageView!
     private var carRentAdvertVMList  = CarRentAdvertListViewModel()
     let manager = CLLocationManager()
@@ -32,6 +39,7 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         mapView.delegate = self
         getDataAdvertList()
+        
        
     }
     
@@ -41,6 +49,11 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
         manager.delegate = self
     manager.requestWhenInUseAuthorization()
        manager.startUpdatingLocation()
+        
+        
+        
+        
+        
         
         
     }
@@ -60,8 +73,6 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
         orderDetail.layer.shadowRadius = 10
     }
    
-    
- 
     func getDataAdvertList(){
         NetworkManager().fetch(url: "http://localhost:3000/carRentAdvertList"
                                , method:.get,requestModel: nil
@@ -74,7 +85,7 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
                 DispatchQueue.main.async {
                     self.mapView.reloadInputViews()
                     
-                    self.readDataToUI()
+                    self.getData()
                     
                     let advertCountA = self.carRentAdvertVMList.numberOfItemsInSection()
                     print("Advert Count \(advertCountA)")
@@ -84,11 +95,6 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
             }
        }
     
-  
-    
-    
-
-    
 }
 
 //Show rental cars on the map
@@ -96,12 +102,32 @@ extension HomePageVC : CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        lastLocation = locations[locations.count-1]
         myCoordinate(lastLocation)
+        reachLoc()
     }
+    
+    
+    
+    // user reached car location
+    func reachLoc() {
+        print(lastLocation.coordinate.longitude)
+        print(longitude)
+        print(lastLocation.coordinate.latitude)
+        print(latitude)
+        if lastLocation.coordinate.longitude == longitude && lastLocation.coordinate.latitude == latitude {
+            
+        }
+    }
+    
+    
+    
+
+  
+    
     
     
     func myCoordinate(_ mylocation:CLLocation) {
         let location = CLLocationCoordinate2D(latitude: mylocation.coordinate.latitude, longitude: mylocation.coordinate.longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let span = MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
         let areaMyLocation = MKCoordinateRegion(center: location, span: span)
         self.mapView.setRegion(areaMyLocation, animated: true)
         
@@ -112,38 +138,48 @@ extension HomePageVC : CLLocationManagerDelegate{
   
     
     func calculatorDistance() {
+        
         for advert in self.carRentAdvertVMList.carRentAdvertList {
-            let carLocation = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)
+             carLocation = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)
             /// CLLocationDistance to Double
-            let distance = (carLocation.distance(from: lastLocation)*1000)/1000
+            let distance = (carLocation!.distance(from: lastLocation)*1000)/1000
             
             distanceCarLocationFromMyLocation[advert.advertId] = distance
             
         }
     }
     
+    func readUI(advert:CartRentAdvertViewModel) {
+        self.advertCarName.text = advert.carInfo.carName
+        self.advertCarName.text = advert.carInfo.carName
+        self.advertCarModel.text = advert.carInfo.carModel
+        self.advertCarPlate.text = advert.carInfo.carPlate
+        self.gearTypeLabel.text = advert.carInfo.carGearType
+        self.latitude = Double(advert.carLocationLatitude)!
+        self.longitude = Double(advert.carLocationLongtude)!
+        self.gaOilLabel.text = "%\(advert.carGasolineState)"
+        let url = URL(string: "\(advert.carInfo.carImage)")
+        self.advertCarImage.kf.setImage(with: url)
+        
+        
+       
+    }
     
         // read data nearest car advert
-    func readDataToUI(){
+    func getData(){
        calculatorDistance()
        
-       let sortResult = distanceCarLocationFromMyLocation.sorted(by: {$0.0 < $1.0})
+       let sortResult = distanceCarLocationFromMyLocation.sorted(by: {$0.0 > $1.0})
           let nearestCar = sortResult[0]
        for advert in self.carRentAdvertVMList.carRentAdvertList {
            if nearestCar.key == advert.advertId {
                // read data to ui
-               self.advertCarName.text = advert.carInfo.carName
-               self.advertCarName.text = advert.carInfo.carName
-               self.advertCarModel.text = advert.carInfo.carModel
-               self.advertCarPlate.text = advert.carInfo.carPlate
-               self.gearTypeLabel.text = advert.carInfo.carGearType
+               
                self.locLabel.text =  String(format: "%.3f", nearestCar.value/1000)+"km"
-               self.latitude = Double(advert.carLocationLatitude)!
-               self.longitude = Double(advert.carLocationLongtude)!
-               self.gaOilLabel.text = "%\(advert.carGasolineState)"
-               print("Test \(nearestCar.value)")
-               let url = URL(string: "\(advert.carInfo.carImage)")
-               self.advertCarImage.kf.setImage(with: url)
+              
+             
+               readUI(advert: advert)
+              
                
            }
            carCoordinates(carLocationLatitude: advert.carLocationLatitude,carLocationLongtude: advert.carLocationLongtude,carName:advert.carInfo.carName)
@@ -155,14 +191,13 @@ extension HomePageVC : CLLocationManagerDelegate{
     func carCoordinates(carLocationLatitude:String,carLocationLongtude:String,carName:String) {
         
         let location = CLLocationCoordinate2D(latitude: Double(carLocationLatitude)!, longitude: Double(carLocationLongtude)!)
-        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let span = MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
         let areaMyLocation = MKCoordinateRegion(center: location, span: span)
         self.mapView.setRegion(areaMyLocation, animated: true)
         
         let pinCar = MKPointAnnotation()
         pinCar.coordinate = location
          pinCar.title = carName
-        pinCar.accessibilityHint = "ali"
          mapView.addAnnotation(pinCar)
     }
 
@@ -174,13 +209,26 @@ extension HomePageVC : CLLocationManagerDelegate{
                 if placemark.count > 0 {
                     let newPlaceMark = MKPlacemark(placemark: placemark[0])
                     let item = MKMapItem(placemark: newPlaceMark)
-                    item.name = self.advertCarName.text
+                    item.name =  "\(self.advertCarName.text!)-\(self.advertCarPlate.text!)"
+                     
                     let launcOptions = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking]
                     item.openInMaps(launchOptions: launcOptions)
                     }
             }
+            
+            
+            
         }
+        
+        
+        
+        
+        
     }
+    
+    
+    
+    
     
     
 }
@@ -196,37 +244,17 @@ extension HomePageVC: MKMapViewDelegate{
             
             if loc1.coordinate.latitude == loc2.coordinate.latitude  {
                
-                self.advertCarName.text = advert.carInfo.carName
-                self.advertCarName.text = advert.carInfo.carName
-                self.advertCarModel.text = advert.carInfo.carModel
-                self.advertCarPlate.text = advert.carInfo.carPlate
-                self.gearTypeLabel.text = advert.carInfo.carGearType
-               
-                self.latitude = Double(advert.carLocationLatitude)!
-                self.longitude = Double(advert.carLocationLongtude)!
-                self.gaOilLabel.text = "%\(advert.carGasolineState)"
-                let url = URL(string: "\(advert.carInfo.carImage)")
-                self.advertCarImage.kf.setImage(with: url)
+                readUI(advert: advert)
                 let carLocation = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)
+                self.selectedCarLocation = carLocation
+           
+                
                 let distance = (carLocation.distance(from: lastLocation)*1000)/1000
                  self.locLabel.text =  String(format: "%.3f", distance/1000)+"km"
             }
-           
-            
         }
         
-      
         
-    
-        
-    
-        
-        
-     
-        
-        
-    
-        print("Oldu")
     }
  
 }

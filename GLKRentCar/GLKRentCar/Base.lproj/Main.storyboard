@@ -184,10 +184,23 @@
                                             <constraint firstAttribute="height" constant="118" id="gDj-iz-wj5"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-kL-LdT">
+                                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYH-7p-C2a">
+                                        <rect key="frame" x="364" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="XMd-1y-gqk" firstAttribute="top" secondItem="hul-zM-6ga" secondAttribute="bottom" constant="7.5" id="0L2-Qc-nIn"/>
+                                    <constraint firstItem="EZ6-kL-LdT" firstAttribute="top" secondItem="chr-qm-FJk" secondAttribute="top" constant="8" id="1Mr-7m-yPo"/>
                                     <constraint firstItem="Y3E-g0-shh" firstAttribute="leading" secondItem="chr-qm-FJk" secondAttribute="leading" constant="27" id="4rR-kR-vUp"/>
                                     <constraint firstItem="e9l-C7-mjc" firstAttribute="top" secondItem="XMd-1y-gqk" secondAttribute="bottom" constant="8" symbolic="YES" id="CUa-JX-Syh"/>
                                     <constraint firstItem="Y3E-g0-shh" firstAttribute="top" secondItem="chr-qm-FJk" secondAttribute="top" constant="32" id="Dh1-Ci-U8U"/>
@@ -195,13 +208,20 @@
                                     <constraint firstAttribute="trailing" secondItem="R00-9h-wfF" secondAttribute="trailing" constant="22" id="FYT-Qp-u9Q"/>
                                     <constraint firstItem="hul-zM-6ga" firstAttribute="top" secondItem="chr-qm-FJk" secondAttribute="top" constant="32" id="I4g-2I-xrG"/>
                                     <constraint firstItem="XMd-1y-gqk" firstAttribute="leading" secondItem="Y3E-g0-shh" secondAttribute="trailing" constant="26" id="KxD-2o-MAZ"/>
+                                    <constraint firstItem="zYH-7p-C2a" firstAttribute="top" secondItem="chr-qm-FJk" secondAttribute="top" constant="8" id="S4z-yZ-IAt"/>
                                     <constraint firstAttribute="trailing" secondItem="NZI-se-iYN" secondAttribute="trailing" constant="80" id="X1L-kw-PJy"/>
                                     <constraint firstAttribute="bottom" secondItem="NZI-se-iYN" secondAttribute="bottom" constant="42" id="XE3-4b-mK4"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZ6-kL-LdT" secondAttribute="trailing" constant="364" id="XTX-4L-0Be"/>
                                     <constraint firstItem="NZI-se-iYN" firstAttribute="top" secondItem="R00-9h-wfF" secondAttribute="bottom" constant="15.5" id="YbZ-eF-ynt"/>
                                     <constraint firstItem="e9l-C7-mjc" firstAttribute="leading" secondItem="Y3E-g0-shh" secondAttribute="trailing" constant="38" id="aKv-c0-b4Z"/>
+                                    <constraint firstItem="EZ6-kL-LdT" firstAttribute="leading" secondItem="chr-qm-FJk" secondAttribute="leading" constant="8" id="egy-Qq-Zgp"/>
                                     <constraint firstItem="hul-zM-6ga" firstAttribute="leading" secondItem="Y3E-g0-shh" secondAttribute="trailing" constant="25" id="g1v-Rg-vwv"/>
+                                    <constraint firstItem="Y3E-g0-shh" firstAttribute="top" secondItem="EZ6-kL-LdT" secondAttribute="bottom" constant="3" id="hvP-6H-FXj"/>
                                     <constraint firstItem="R00-9h-wfF" firstAttribute="top" secondItem="Y3E-g0-shh" secondAttribute="bottom" constant="8" symbolic="YES" id="khn-w5-ce3"/>
+                                    <constraint firstItem="zYH-7p-C2a" firstAttribute="leading" secondItem="EZ6-kL-LdT" secondAttribute="trailing" constant="314" id="mL8-BV-Wky"/>
+                                    <constraint firstAttribute="trailing" secondItem="zYH-7p-C2a" secondAttribute="trailing" constant="8" id="qVi-1h-s9Z"/>
                                     <constraint firstItem="R00-9h-wfF" firstAttribute="leading" secondItem="chr-qm-FJk" secondAttribute="leading" constant="22" id="wau-HP-zlK"/>
+                                    <constraint firstItem="R00-9h-wfF" firstAttribute="top" secondItem="zYH-7p-C2a" secondAttribute="bottom" constant="129" id="z47-00-ebh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -227,7 +247,9 @@
                         <outlet property="detailView" destination="chr-qm-FJk" id="kpy-42-hhf"/>
                         <outlet property="gaOilLabel" destination="1XH-HT-ksZ" id="XR4-bI-gTt"/>
                         <outlet property="gearTypeLabel" destination="qCx-Go-RaS" id="KUQ-9C-Icr"/>
+                        <outlet property="latLabel" destination="EZ6-kL-LdT" id="KJr-Vi-0TR"/>
                         <outlet property="locLabel" destination="dK3-g6-X72" id="t8m-w5-qFR"/>
+                        <outlet property="logLabel" destination="zYH-7p-C2a" id="hyf-iw-Loh"/>
                         <outlet property="mapView" destination="5MN-SA-Jv9" id="HdC-KU-34B"/>
                         <outlet property="orderDetail" destination="R00-9h-wfF" id="y5x-X9-pvz"/>
                     </connections>
