@@ -24,6 +24,8 @@
 		7D696959283CF71A002C332C /* Carrentadvertresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D696958283CF71A002C332C /* Carrentadvertresult.swift */; };
 		7D69695C283D2B2A002C332C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D69695B283D2B2A002C332C /* Kingfisher */; };
 		7D69695E283D3D4E002C332C /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69695D283D3D4E002C332C /* HomePageVC.swift */; };
+		7D9149062842906500BA9DE2 /* CarRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9149052842906500BA9DE2 /* CarRent.swift */; };
+		7D9213D528427CAC00536F29 /* RentCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9213D428427CAC00536F29 /* RentCarVC.swift */; };
 		7DB88A3C2840C356008F6F02 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB88A3B2840C356008F6F02 /* CoreLocation.framework */; };
 		7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC4283C2F35003E7383 /* Carinfo.swift */; };
 		7DCA7FC9283C3062003E7383 /* Carrentadvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */; };
@@ -46,6 +48,8 @@
 		7D696953283CED01002C332C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7D696958283CF71A002C332C /* Carrentadvertresult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrentadvertresult.swift; sourceTree = "<group>"; };
 		7D69695D283D3D4E002C332C /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		7D9149052842906500BA9DE2 /* CarRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRent.swift; sourceTree = "<group>"; };
+		7D9213D428427CAC00536F29 /* RentCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCarVC.swift; sourceTree = "<group>"; };
 		7DB88A3B2840C356008F6F02 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7DCA7FC4283C2F35003E7383 /* Carinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carinfo.swift; sourceTree = "<group>"; };
 		7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrentadvert.swift; sourceTree = "<group>"; };
@@ -117,19 +121,12 @@
 		7D280B25283BFE89007D734A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D280B2F283C049D007D734A /* Cell */,
 				7D280B26283BFEAC007D734A /* LoginPage.swift */,
 				7D280B29283BFFB9007D734A /* CreateAccount.swift */,
 				7D69695D283D3D4E002C332C /* HomePageVC.swift */,
+				7D9213D428427CAC00536F29 /* RentCarVC.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		7D280B2F283C049D007D734A /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		7D696952283CECED002C332C /* Service */ = {
@@ -146,6 +143,7 @@
 				7DCA7FC4283C2F35003E7383 /* Carinfo.swift */,
 				7DCA7FC8283C3062003E7383 /* Carrentadvert.swift */,
 				7D696958283CF71A002C332C /* Carrentadvertresult.swift */,
+				7D9149052842906500BA9DE2 /* CarRent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,9 +243,11 @@
 				7D696954283CED01002C332C /* NetworkManager.swift in Sources */,
 				7D280B27283BFEAC007D734A /* LoginPage.swift in Sources */,
 				7DCA7FC5283C2F35003E7383 /* Carinfo.swift in Sources */,
+				7D9213D528427CAC00536F29 /* RentCarVC.swift in Sources */,
 				7D280B2A283BFFB9007D734A /* CreateAccount.swift in Sources */,
 				7D280B13283BFE27007D734A /* ViewController.swift in Sources */,
 				7DCA7FCE283C3446003E7383 /* CarRentAdvertListVM.swift in Sources */,
+				7D9149062842906500BA9DE2 /* CarRent.swift in Sources */,
 				7D696959283CF71A002C332C /* Carrentadvertresult.swift in Sources */,
 				7D280B0F283BFE27007D734A /* AppDelegate.swift in Sources */,
 				7D69695E283D3D4E002C332C /* HomePageVC.swift in Sources */,

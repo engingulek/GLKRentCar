@@ -55,4 +55,8 @@ struct CartRentAdvertViewModel {
         return carRentAdvert.carLocationLatitude
     }
     
+    var advertPassword : String {
+        return carRentAdvert.advertPassword
+    }
+    
 }

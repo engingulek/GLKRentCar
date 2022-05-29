@@ -17,4 +17,5 @@ struct Carrentadvert : Codable {
     var carAdvertDescription : String
     var carLocationLongtude : String
     var carLocationLatitude : String
+    var advertPassword : String
 }

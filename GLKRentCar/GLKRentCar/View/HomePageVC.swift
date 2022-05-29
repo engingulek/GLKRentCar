@@ -21,9 +21,7 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var gaOilLabel: UILabel!
     @IBOutlet weak var gearTypeLabel: UILabel!
     
-    @IBOutlet weak var latLabel: UILabel!
-    
-    @IBOutlet weak var logLabel: UILabel!
+   
     
     var  distanceCarLocationFromMyLocation = [String:Double]()
     var latitude = Double()
@@ -31,6 +29,7 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
     var lastLocation: CLLocation!
     var carLocation : CLLocation?
     var selectedCarLocation:CLLocation!
+    var selectedaAdvert:CartRentAdvertViewModel!
     @IBOutlet weak var advertCarImage: UIImageView!
     private var carRentAdvertVMList  = CarRentAdvertListViewModel()
     let manager = CLLocationManager()
@@ -114,9 +113,15 @@ extension HomePageVC : CLLocationManagerDelegate{
         print(lastLocation.coordinate.latitude)
         print(latitude)
         if lastLocation.coordinate.longitude == longitude && lastLocation.coordinate.latitude == latitude {
+            let storybord = UIStoryboard(name: "Main", bundle: nil)
             
+            let toVC = storybord.instantiateViewController(withIdentifier: "renCarVC") as! RentCarVC
+            toVC.selectedaAdvert = selectedaAdvert
+            self.navigationController?.pushViewController(toVC, animated: true)
         }
     }
+    
+  
     
     
     
@@ -160,6 +165,9 @@ extension HomePageVC : CLLocationManagerDelegate{
         self.gaOilLabel.text = "%\(advert.carGasolineState)"
         let url = URL(string: "\(advert.carInfo.carImage)")
         self.advertCarImage.kf.setImage(with: url)
+        self.selectedaAdvert = advert
+     
+        
         
         
        
@@ -215,22 +223,8 @@ extension HomePageVC : CLLocationManagerDelegate{
                     item.openInMaps(launchOptions: launcOptions)
                     }
             }
-            
-            
-            
         }
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
-    
 }
 
 

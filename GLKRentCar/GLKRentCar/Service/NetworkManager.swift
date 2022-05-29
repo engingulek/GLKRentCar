@@ -10,37 +10,35 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkManager {
-    
-    
-    
     public func fetch<T:Codable>(url:String,method:HTTPMethod,requestModel: T?, model: T.Type,completion: @escaping (AFResult<Codable>) -> Void) {
+    
+        let param = NetworkManager.toParameters(model: requestModel)
         
-        AF.request(url,
-                   method:method,
-                   parameters: NetworkManager.toParameters(model: requestModel) ).response { response in
-            
-         
-            
-            
-            
-            
-            switch response.result {
-            case .success(let value):
-                do{
-                    
-                    let responseJsonData = JSON(value!)
-                    
-                    let responseModel = try JSONDecoder().decode(model.self, from: responseJsonData.rawData())
-                    completion(.success(responseModel))
-                }
-                catch let parsingError{
-                                        print("Success (error): \(parsingError)")
-                                    }
-            case .failure(let error):
-                print("Failure: \(error)")
-                                        completion(.failure(error))
+        
+        AF.request(url,method:method,
+                   parameters: param,encoding: JSONEncoding.init() ).response { response in
+        
+            if method == .get {
                 
+                    switch response.result {
+                    case .success(let value):
+                        do{
+                            
+                            let responseJsonData = JSON(value!)
+                            
+                            let responseModel = try JSONDecoder().decode(model.self, from: responseJsonData.rawData())
+                            completion(.success(responseModel))
+                        }
+                        catch let parsingError{
+                                                print("Success (error): \(parsingError)")
+                                            }
+                    case .failure(let error):
+                        print("Failure: \(error)")
+                                                completion(.failure(error))
+                        
+                    }
             }
+            
             
         }
         
