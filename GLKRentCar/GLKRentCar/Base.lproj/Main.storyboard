@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="-84.057971014492765" y="143.97321428571428"/>
         </scene>
-        <!--Detail-->
+        <!--Home Page-->
         <scene sceneID="OJi-5I-Ym6">
             <objects>
                 <viewController storyboardIdentifier="carRenAdvertDetails" id="fTD-h8-xaY" customClass="HomePageVC" customModule="GLKRentCar" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                             <constraint firstAttribute="bottom" secondItem="chr-qm-FJk" secondAttribute="bottom" id="rhN-pe-pEC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="WaU-Ng-nfZ">
+                    <navigationItem key="navigationItem" title="Home Page" id="WaU-Ng-nfZ">
                         <barButtonItem key="backBarButtonItem" title="Detail" id="neE-yo-ymc"/>
                     </navigationItem>
                     <connections>
@@ -480,7 +480,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O3T-1t-eZd"/>
+        <segue reference="rGl-Qa-QKg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>

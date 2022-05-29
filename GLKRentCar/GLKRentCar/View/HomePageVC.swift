@@ -54,7 +54,7 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-    
+    // orderDetailView and detailView Design
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         detailView.layer.cornerRadius = 45
@@ -69,6 +69,8 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
         orderDetail.layer.shadowRadius = 10
     }
    
+    
+    // get advert list from database
     func getDataAdvertList(){
         NetworkManager().fetch(url: "http://localhost:3000/carRentAdvertList"
                                , method:.get,requestModel: nil
@@ -127,26 +129,22 @@ extension HomePageVC : CLLocationManagerDelegate{
   
     
     
-    
+    // mylocation area
     func myCoordinate(_ mylocation:CLLocation) {
         let location = CLLocationCoordinate2D(latitude: mylocation.coordinate.latitude, longitude: mylocation.coordinate.longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
         let areaMyLocation = MKCoordinateRegion(center: location, span: span)
         self.mapView.setRegion(areaMyLocation, animated: true)
-        
-        print("My Loc \(mylocation.coordinate.latitude) \(mylocation.coordinate.longitude)")
     }
     
     
   
-    
+    // userloc and carlocation distance
     func calculatorDistance() {
         
         for advert in self.carRentAdvertVMList.carRentAdvertList {
              carLocation = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)
             /// CLLocationDistance to Double
-           
-            
              distance = (carLocation!.distance(from: lastLocation)*1000)/1000
             
             distanceCarLocationFromMyLocation[advert.advertId] = distance
@@ -154,6 +152,8 @@ extension HomePageVC : CLLocationManagerDelegate{
         }
     }
     
+    
+    /// date read ui
     func readUI(advert:CartRentAdvertViewModel) {
         self.advertCarName.text = advert.carInfo.carName
         self.advertCarName.text = advert.carInfo.carName
@@ -195,7 +195,7 @@ extension HomePageVC : CLLocationManagerDelegate{
     }
     
     
-    
+    // car coordinate add pin
     func carCoordinates(carLocationLatitude:String,carLocationLongtude:String,carName:String) {
         
         let location = CLLocationCoordinate2D(latitude: Double(carLocationLatitude)!, longitude: Double(carLocationLongtude)!)
@@ -230,6 +230,7 @@ extension HomePageVC : CLLocationManagerDelegate{
 
 extension HomePageVC: MKMapViewDelegate{
    
+    // when pin selected will change ui
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if view.annotation is MKUserLocation {
                return

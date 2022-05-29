@@ -21,7 +21,7 @@ class TimerRentVC : UIViewController{
     }
     
     
-    
+    // timer start
     @objc func timerCounter() -> Void
     {
         count = count + 1
@@ -31,7 +31,7 @@ class TimerRentVC : UIViewController{
     }
     
     
-    
+    // conver timer to time
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int)
         {
             return ((seconds / 3600), ((seconds % 3600) / 60),((seconds % 3600) % 60))
@@ -52,20 +52,22 @@ class TimerRentVC : UIViewController{
     @IBAction func rentFinish(_ sender: Any) {
         count = count + 0
         let time = secondsToHoursMinutesSeconds(seconds: count)
-        let totalMinute = 20
-        //let totalMinute = (time.0*60) + time.1
-        print("Total Amount \(totalMinute)")
+        // default test minute
+        ///let totalMinute = 20
+        let totalMinute = (time.0*60) + time.1
         let amount = totalMinute * rentCar.advertMinuteCost
         alertMessage(title: "Finish Rent", message: "Amount \(amount)")
        
     }
     
+    // create alert
     func alertMessage(title:String,message:String) {
-        let alertController = UIAlertController(title: "da", message: "da", preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Okey", style: .default) { alert in
             self.performSegue(withIdentifier: "toFinish", sender: nil)
         }
         alertController.addAction(alertAction)
+        // to HomePage
         self.present(alertController, animated: true)
     }
     

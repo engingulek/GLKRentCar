@@ -32,7 +32,7 @@ class RentCarVC: UIViewController {
     }
     
     
-    
+    // the car rent and the data of advertisement  write to database
     @IBAction func rentCarAction(_ sender: Any) {
         if carPassword.text == selectedaAdvert.advertPassword {
             // rent car
@@ -62,7 +62,7 @@ class RentCarVC: UIViewController {
     
 }
     
-    
+    // go to timerViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRentTimer" {
             if let advert = sender as? CarRent {
