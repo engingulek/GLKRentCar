@@ -33,11 +33,11 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var advertCarImage: UIImageView!
     private var carRentAdvertVMList  = CarRentAdvertListViewModel()
     let manager = CLLocationManager()
-    
+    var distance: Double! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         mapView.delegate = self
-        getDataAdvertList()
         
        
     }
@@ -48,14 +48,11 @@ class HomePageVC:UIViewController, UIGestureRecognizerDelegate {
         manager.delegate = self
     manager.requestWhenInUseAuthorization()
        manager.startUpdatingLocation()
-        
-        
-        
-        
-        
-        
-        
+        calculatorDistance()
+        getDataAdvertList()
+
     }
+    
     
     
     override func viewDidLayoutSubviews() {
@@ -101,6 +98,7 @@ extension HomePageVC : CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        lastLocation = locations[locations.count-1]
         myCoordinate(lastLocation)
+        
         reachLoc()
     }
     
@@ -147,7 +145,9 @@ extension HomePageVC : CLLocationManagerDelegate{
         for advert in self.carRentAdvertVMList.carRentAdvertList {
              carLocation = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)
             /// CLLocationDistance to Double
-            let distance = (carLocation!.distance(from: lastLocation)*1000)/1000
+           
+            
+             distance = (carLocation!.distance(from: lastLocation)*1000)/1000
             
             distanceCarLocationFromMyLocation[advert.advertId] = distance
             
@@ -218,7 +218,7 @@ extension HomePageVC : CLLocationManagerDelegate{
                     let newPlaceMark = MKPlacemark(placemark: placemark[0])
                     let item = MKMapItem(placemark: newPlaceMark)
                     item.name =  "\(self.advertCarName.text!)-\(self.advertCarPlate.text!)"
-                     
+                    
                     let launcOptions = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking]
                     item.openInMaps(launchOptions: launcOptions)
                     }
@@ -229,9 +229,15 @@ extension HomePageVC : CLLocationManagerDelegate{
 
 
 extension HomePageVC: MKMapViewDelegate{
+   
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let loc1 = CLLocation(latitude: (view.annotation?.coordinate.latitude)!, longitude: (view.annotation?.coordinate.longitude)!)
+        if view.annotation is MKUserLocation {
+               return
+           }
         
+        
+        let loc1 = CLLocation(latitude: (view.annotation?.coordinate.latitude)!, longitude: (view.annotation?.coordinate.longitude)!)
+        print("Seçim")
         for advert in self.carRentAdvertVMList.carRentAdvertList {
             
             let loc2 = CLLocation(latitude: Double(advert.carLocationLatitude)!, longitude: Double(advert.carLocationLongtude)!)

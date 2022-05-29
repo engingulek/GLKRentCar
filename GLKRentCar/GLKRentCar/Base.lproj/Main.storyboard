@@ -335,20 +335,64 @@
             </objects>
             <point key="canvasLocation" x="1647.826086956522" y="1036.6071428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer RentVC-->
         <scene sceneID="ehQ-fQ-0vO">
             <objects>
-                <viewController id="1Fv-fF-iKf" sceneMemberID="viewController">
+                <viewController id="1Fv-fF-iKf" customClass="TimerRentVC" customModule="GLKRentCar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yTX-Eg-mK2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEn-wQ-ivS">
+                                <rect key="frame" x="177" y="318" width="60" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu9-y1-2V1">
+                                <rect key="frame" x="114" y="397" width="186" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b1-bS-CTI">
+                                <rect key="frame" x="167" y="555" width="80" height="40.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Finish">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rentFinish:" destination="1Fv-fF-iKf" eventType="touchUpInside" id="dSO-Wa-PaR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo0-dU-rqY">
+                                <rect key="frame" x="181" y="480" width="52" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DfG-kN-jUf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nu9-y1-2V1" firstAttribute="top" secondItem="VEn-wQ-ivS" secondAttribute="bottom" constant="45" id="2hv-uC-re8"/>
+                            <constraint firstItem="VEn-wQ-ivS" firstAttribute="top" secondItem="DfG-kN-jUf" secondAttribute="top" constant="274" id="JHK-zn-qDO"/>
+                            <constraint firstItem="Yo0-dU-rqY" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="RlC-n7-PjQ"/>
+                            <constraint firstItem="VEn-wQ-ivS" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="aQu-Id-Gd1"/>
+                            <constraint firstItem="5b1-bS-CTI" firstAttribute="top" secondItem="Nu9-y1-2V1" secondAttribute="bottom" constant="104" id="dZp-KQ-rhN"/>
+                            <constraint firstItem="Nu9-y1-2V1" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="gVr-MZ-qAf"/>
+                            <constraint firstItem="5b1-bS-CTI" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="hZ3-r8-lUk"/>
+                            <constraint firstItem="Yo0-dU-rqY" firstAttribute="top" secondItem="Nu9-y1-2V1" secondAttribute="bottom" constant="29" id="nKr-Iw-Rq3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="Nu9-y1-2V1" id="wGh-ff-YbW"/>
+                        <segue destination="eGe-Od-xP0" kind="presentation" identifier="toFinish" modalPresentationStyle="fullScreen" id="O3T-1t-eZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHl-C9-tV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2719" y="1026"/>
+            <point key="canvasLocation" x="2599" y="1037"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="315-KV-tfS">
@@ -435,6 +479,9 @@
             <point key="canvasLocation" x="-84.057971014492765" y="1036.6071428571429"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="O3T-1t-eZd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="gas" width="512" height="512"/>

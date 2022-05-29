@@ -48,51 +48,28 @@ class RentCarVC: UIViewController {
                formatter.dateFormat = "yyyy-MM-dd HH:mm"
 
                let startTime = formatter.string(from: now)
-         
-         
-             
-        
             let advert = self.selectedaAdvert
-            
-    
-            
             let newCarRentInfo = Carinfo(carName: advert!.carInfo.carName, carImage: advert!.carInfo.carImage, carModel: advert!.carInfo.carModel, carPlate: advert!.carInfo.carPlate, carGearType: advert!.carInfo.carGearType)
             let newCarRent = CarRent(userId: userId, startTime: startTime, advert: newCarRentInfo, advertMinuteCost: advert!.carRentMinuteCost)
         
             
             NetworkManager().fetch(url: "http://localhost:3000/carRent", method: .post, requestModel: newCarRent, model: CarRent.self) { response in
                 
-                switch(response){
-                case .success(let data):
-                    print("Veri \(data)")
-                case .failure(let error):
-                    print("Hata \(error.localizedDescription)")
-                }
-              
-                
-                
-                
             }
             
-            
-            
-         
-          
-            
-            /*AF.request("http://localhost:3000/carRent",method: .post,parameters: params,encoding: JSONEncoding.init()).response{
-                response in
-                
-                if let data = response.data{
-                    do {
-                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
-                                               print("Ali \(json)")
-                        }
-                }catch{
-                    print("OLmaduı ")
-                }
-            }
-        }*/
+            self.performSegue(withIdentifier: "toRentTimer", sender: newCarRent)
     }
     
 }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRentTimer" {
+            if let advert = sender as? CarRent {
+                let toGoVC = segue.destination as! TimerRentVC
+                toGoVC.rentCar = advert
+            }
+        }
+        
+    }
 }

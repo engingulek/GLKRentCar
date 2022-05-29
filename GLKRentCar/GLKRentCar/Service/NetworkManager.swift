@@ -17,7 +17,9 @@ class NetworkManager {
         
         AF.request(url,method:method,
                    parameters: param,encoding: JSONEncoding.init() ).response { response in
-        
+            
+           
+            
             if method == .get {
                 
                     switch response.result {
