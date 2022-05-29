@@ -54,8 +54,14 @@ class TimerRentVC : UIViewController{
         let time = secondsToHoursMinutesSeconds(seconds: count)
         // default test minute
         ///let totalMinute = 20
+        var amount = 0
         let totalMinute = (time.0*60) + time.1
-        let amount = totalMinute * rentCar.advertMinuteCost
+        if totalMinute == 0 {
+            amount = rentCar.advertMinuteCost
+        }else{
+             amount = totalMinute * rentCar.advertMinuteCost
+        }
+    
         alertMessage(title: "Finish Rent", message: "Amount \(amount)")
        
     }

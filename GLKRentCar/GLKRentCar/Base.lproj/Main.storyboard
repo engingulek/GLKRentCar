@@ -365,24 +365,16 @@
                                     <action selector="rentFinish:" destination="1Fv-fF-iKf" eventType="touchUpInside" id="dSO-Wa-PaR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo0-dU-rqY">
-                                <rect key="frame" x="181" y="480" width="52" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DfG-kN-jUf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Nu9-y1-2V1" firstAttribute="top" secondItem="VEn-wQ-ivS" secondAttribute="bottom" constant="45" id="2hv-uC-re8"/>
                             <constraint firstItem="VEn-wQ-ivS" firstAttribute="top" secondItem="DfG-kN-jUf" secondAttribute="top" constant="274" id="JHK-zn-qDO"/>
-                            <constraint firstItem="Yo0-dU-rqY" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="RlC-n7-PjQ"/>
                             <constraint firstItem="VEn-wQ-ivS" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="aQu-Id-Gd1"/>
                             <constraint firstItem="5b1-bS-CTI" firstAttribute="top" secondItem="Nu9-y1-2V1" secondAttribute="bottom" constant="104" id="dZp-KQ-rhN"/>
                             <constraint firstItem="Nu9-y1-2V1" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="gVr-MZ-qAf"/>
                             <constraint firstItem="5b1-bS-CTI" firstAttribute="centerX" secondItem="yTX-Eg-mK2" secondAttribute="centerX" id="hZ3-r8-lUk"/>
-                            <constraint firstItem="Yo0-dU-rqY" firstAttribute="top" secondItem="Nu9-y1-2V1" secondAttribute="bottom" constant="29" id="nKr-Iw-Rq3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -480,7 +472,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rGl-Qa-QKg"/>
+        <segue reference="O3T-1t-eZd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
