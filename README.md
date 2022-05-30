@@ -1,6 +1,9 @@
 # GLKRentCar
 Rental Car App for  ios app
 
+<h4> Local Coordinate </h4>
+<b>Latitude</b> : 41,00821
+<b>Longitude</b> : 28,95461
 <h2>Server Source Code</h2>
 https://github.com/engingulek/GLKRentCarServerSide
 
